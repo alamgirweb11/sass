@@ -1,0 +1,44 @@
+body {
+  font-family: Verdana, Arial, sans-serif;
+  color: #222222;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Palatino Linotype", Georgia, serif;
+}
+
+p {
+  font-family: Verdana, Arial, sans-serif;
+}
+
+a {
+  color: #f27731;
+}
+
+.warning-button {
+  background-color: #f0b30c;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+}
+
+#header {
+  height: 60px;
+  background-color: #170a48;
+}
+#header #main-menu li {
+  display: inline;
+  list-style: none;
+}
+#header #main-menu a {
+  color: #fff;
+}
+#main {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer {
+  height: 90px;
+  background-color: #ccf962;
+}/*# sourceMappingURL=main.css.map */
