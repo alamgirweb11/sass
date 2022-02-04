@@ -1,0 +1,33 @@
+@mixin warning{
+    background-color: #f0b30c;
+    color: #fff;
+}
+
+@mixin large-text{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@mixin rounded($radius){
+   border-radius: $radius;
+}
+
+// access more argument in one variable
+@mixin box-shadow($shadows...){
+     box-shadow: $shadows;
+     -moz-box-shadow: $shadows;
+     -webkit-box-shadow: $shadows;
+}
+
+// argument with default value
+@mixin box($radius: 6px, $border: 1px solid #111){
+      @include rounded($radius);
+      border: $border;
+}
+
+@mixin fancy-links{
+  a{
+      font-style: italic;
+      text-decoration: none;
+  }
+}

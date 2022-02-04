@@ -1,30 +1,6 @@
 @import "variables";
 
-@mixin warning{
-     background-color: #f0b30c;
-     color: #fff;
-}
-
-@mixin large-text{
-     font-size: 22px;
-     font-weight: bold;
-}
-
-@mixin rounded{
-    border-radius: 6px;
-}
-
-@mixin box{
-       @include rounded();
-       border: 1px solid #333;
-}
-
-@mixin fancy-links{
-   a{
-       font-style: italic;
-       text-decoration: none;
-   }
-}
+@import "mixins";
 
 // declare public
 @include fancy-links();
@@ -57,7 +33,10 @@ a {
 }
 
 #header {
-           @include box();
+      // set parameter
+           @include box($radius: 12px, $border: 1px solid #999);
+      // set parameter for multiple value
+           @include box-shadow(1px 0px 4px #999, 1px 1px 6px $secondary-color);
            height: $header-height;
            background-color: $theme-color;
         
