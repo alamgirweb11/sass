@@ -5,6 +5,14 @@
 // declare public
 @include fancy-links();
 
+
+// set value for ie-6
+@include apply-to-ie-6{
+        body{
+          font-size: 125%;
+        }
+}
+
 body {
   font-family: $text-font;
   color: $text-color;
