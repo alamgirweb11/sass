@@ -5,6 +5,30 @@
      color: #fff;
 }
 
+@mixin large-text{
+     font-size: 22px;
+     font-weight: bold;
+}
+
+@mixin rounded{
+    border-radius: 6px;
+}
+
+@mixin box{
+       @include rounded();
+       border: 1px solid #333;
+}
+
+@mixin fancy-links{
+   a{
+       font-style: italic;
+       text-decoration: none;
+   }
+}
+
+// declare public
+@include fancy-links();
+
 body {
   font-family: $text-font;
   color: $text-color;
@@ -12,6 +36,10 @@ body {
 
 h1, h2, h3, h4 {
       font-family: $headline-font;
+}
+
+h2{
+    @include large-text;
 }
 
 p {
@@ -29,8 +57,10 @@ a {
 }
 
 #header {
+           @include box();
            height: $header-height;
            background-color: $theme-color;
+        
   #main-menu {
          li{
              display: inline;
