@@ -1,0 +1,138 @@
+@import "partials/functions";
+@import "partials/variables";
+@import "partials/mixins";
+
+@include google-font("Alegreya+Sans");
+@include google-font("Titllium+Web");
+
+// declare public
+@include fancy-links();
+
+
+// set value for ie-6
+@include apply-to-ie-6{
+        body{
+          font-size: 125%;
+        }
+}
+
+body {
+  font-family: $text-font;
+  color: $text-color;
+  // use of user define functions
+  font-size: em(18px);
+  @include large-screens{
+    font-size: 125%;
+  }
+}
+
+h1, h2, h3, h4 {
+      font-family: $headline-font;
+}
+
+h2{
+    @include large-text;
+}
+
+p {
+      font-family: $text-font;
+}
+
+a {
+     color: $link-color;
+     &:hover{
+       color: darken($link-color, 15%)
+     }
+}
+
+.warning-button{
+       @include warning;
+       padding:  8px 12px;
+       border: none;
+       &:hover{
+        //  lighten() built in function
+           background-color: lighten($color: #faa301, $amount: 10%);
+       }
+}
+
+#header {
+      // set parameter
+           @include box($radius: 12px, $border: 1px solid #999);
+      // set parameter for multiple value
+           @include box-shadow(1px 0px 4px #999, 1px 1px 6px $secondary-color);
+           height: $header-height;
+           background-color: $theme-color;
+        
+  #main-menu {
+         li{
+             display: inline;
+             list-style: none;
+         }
+          a{
+             color: $menu-item-color;
+             padding: 6px 8px;
+            //  transparentize() built in function
+             border-bottom: 1px solid transparentize($color: #fefefe, $amount: 1);
+             transition: border-bottom .5s;
+             transition-timing-function: ease-in-out;
+             &:hover{
+                 border-bottom: 1px solid opacify($color: #fefefe, $amount: .5);
+             }
+          }
+  }
+  
+  #logo {
+
+  }
+}
+
+#main {
+  @include large-screens{
+    width: auto;
+    max-width: $content-width;
+}
+    width: $content-width;
+    margin-left: auto;
+    margin-right: auto;
+
+  #content {
+      float: left;
+      width: 6*$col;
+  }
+// use of inheritance
+.special-block{
+          border: 2px dashed #999;
+}
+// inherit class from mixins
+.italic-text{
+    @include italic-text();
+}
+// if class is not exists, for ignore this class use !optional and don't get any error
+.third-para{
+    @extend .special-block;
+    @extend .italic-text;
+    // example-class is not exists !optional use for ignore this
+    @extend .example-class !optional;
+    color: #faa301;
+    padding: 8px;
+    font-weight: bolder;
+}
+  #sidebar {
+      float: right;
+      width: 2*$col;
+      li{
+          list-style-type: none;
+          padding: em(16px) em(20px);
+          border-bottom: 1px dashed #999;
+          &:hover{
+                background-color: #efefef;
+          }
+      }
+  }
+}
+
+#footer {
+  clear: both;
+       height: $footer-height;
+       background-color: $ternary-color;
+}
