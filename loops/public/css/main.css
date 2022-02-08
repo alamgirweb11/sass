@@ -36,6 +36,42 @@
   width: 50px;
 }
 
+.fahim-profile-img {
+  background-image: url("./img/fahim.jpg");
+}
+
+.fahat-profile-img {
+  background-image: url("./img/fahat.jpg");
+}
+
+.rahat-profile-img {
+  background-image: url("./img/rahat.jpg");
+}
+
+.rohan-profile-img {
+  background-image: url("./img/rohan.jpg");
+}
+
+.rojan-profile-img {
+  background-image: url("./img/rojan.jpg");
+}
+
+.tiny {
+  font-size: 8px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.medium {
+  font-size: 16px;
+}
+
+.large {
+  font-size: 18px;
+}
+
 a {
   font-style: italic;
   text-decoration: none;

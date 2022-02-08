@@ -25,6 +25,24 @@
      }
 }
 
+// foreach loop called each loop in sass
+//example of each loop without key value pair
+// for client section load client images
+$clients: fahim, fahat, rahat, rohan, rojan;
+@each $client in $clients{
+      .#{$client}-profile-img{
+          background-image: url('./img/#{$client}.jpg');
+      }
+}
+
+// set device wise font size with key value pair
+$font-sizes: (tiny: 8px, small: 12px, medium: 16px, large: 18px);
+@each $device, $font-size in $font-sizes{
+       .#{$device}{
+            font-size: $font-size;
+       }
+}
+
 // declare public
 @include fancy-links();
 
