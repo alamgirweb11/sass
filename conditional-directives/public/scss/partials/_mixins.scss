@@ -1,3 +1,20 @@
+// client wise utilities change 
+@mixin blue-beans{
+       @if $brand == blue-beans{
+                 @content;
+       }
+}
+@mixin rogers-rovers{
+       @if $brand == rogers-rovers{
+                 @content;
+       }
+}
+@mixin pastry-pizza{
+       @if $brand == pastry-pizza{
+                 @content;
+       }
+}
+
 // media queries for variant devices
 @mixin tiny-screens(){
        @media only screen and (max-width: 320px){
