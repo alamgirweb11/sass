@@ -72,6 +72,46 @@
   font-size: 18px;
 }
 
+.static-picture-1 {
+  width: 10px;
+}
+
+.static-picture-2 {
+  width: 20px;
+}
+
+.static-picture-3 {
+  width: 30px;
+}
+
+.static-picture-4 {
+  width: 40px;
+}
+
+.static-picture-5 {
+  width: 50px;
+}
+
+.static-picture-6 {
+  width: 60px;
+}
+
+.static-picture-7 {
+  width: 70px;
+}
+
+.static-picture-8 {
+  width: 80px;
+}
+
+.static-picture-9 {
+  width: 90px;
+}
+
+.static-picture-10 {
+  width: 100px;
+}
+
 a {
   font-style: italic;
   text-decoration: none;

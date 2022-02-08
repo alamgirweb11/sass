@@ -43,6 +43,16 @@ $font-sizes: (tiny: 8px, small: 12px, medium: 16px, large: 18px);
        }
 }
 
+// example of while loop
+$picture-serial: 1;
+@while $picture-serial <= 10 {
+      .static-picture-#{$picture-serial} {
+           width: $picture-serial * 10px;
+      }
+      $picture-serial: $picture-serial + 1;
+}
+
+
 // declare public
 @include fancy-links();
 
