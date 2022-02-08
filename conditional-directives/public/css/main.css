@@ -10,8 +10,8 @@ a {
 }
 
 body {
+  background-color: #ffff;
   font-family: "Alegreya Sans", Arial, sans-serif;
-  color: #000;
   font-size: 1.125em;
 }
 @media only screen and (max-width: 960px) {
@@ -20,8 +20,12 @@ body {
   }
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Titllium Web", Georgia, serif;
+  color: #222222;
 }
 
 h2 {
@@ -31,6 +35,7 @@ h2 {
 
 p {
   font-family: "Alegreya Sans", Arial, sans-serif;
+  color: #222222;
 }
 
 a {
@@ -108,9 +113,11 @@ a:hover {
   list-style-type: none;
   padding: 1em 1.25em;
   border-bottom: 1px dashed #999;
+  color: #222222;
 }
 #main #sidebar li:hover {
   background-color: #efefef;
+  color: #222222;
 }
 
 #footer {
