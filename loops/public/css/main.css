@@ -1,5 +1,41 @@
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans);
 @import url(https://fonts.googleapis.com/css?family=Titllium+Web);
+.col-1 {
+  width: 2em;
+}
+
+.col-2 {
+  width: 4em;
+}
+
+.col-3 {
+  width: 6em;
+}
+
+.col-4 {
+  width: 8em;
+}
+
+.col-1 {
+  width: 10px;
+}
+
+.col-2 {
+  width: 20px;
+}
+
+.col-3 {
+  width: 30px;
+}
+
+.col-4 {
+  width: 40px;
+}
+
+.col-5 {
+  width: 50px;
+}
+
 a {
   font-style: italic;
   text-decoration: none;

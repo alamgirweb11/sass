@@ -5,6 +5,26 @@
 @include google-font("Alegreya+Sans");
 @include google-font("Titllium+Web");
 
+// declaration of for loop
+// 1. @for $var-name from initial value to end value
+// 2. @for $var-name from initial value through end last index
+
+// print 1-4 syntax
+// first method of for loop
+@for $i from 1 to 5{
+      .col-#{$i}{
+           width: $i * 2em;
+      }
+}
+
+// print 1-5 syntax
+// second method of for loop
+@for $j from 1 through 5{
+     .col-#{$j}{
+          width:  $j * 10px;
+     }
+}
+
 // declare public
 @include fancy-links();
 
